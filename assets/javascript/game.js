@@ -11,3 +11,4 @@ Math.floor
 
 //Reset the guesses once the correct movie title has been guessed
 
+//change picture to go along with guess count
