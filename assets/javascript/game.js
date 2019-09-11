@@ -11,11 +11,30 @@
     var computerMind = document.getElementsByClassName("computermind");
     var userMind = document.getElementsByClassName("usermind");
 
-    var directionsText = document.getElementsByClassName("directions-text");
+    var rules = document.getElementsByClassName("rules");
     
    
     var wins = document.getElementsByClassName("wins");
     var losses = document.getElementsByClassName("losses");
     var ties = document.getElementsByClassName("ties");
 
+    document.onkeyup = function(event) {
 
+        // Determines which key was pressed.
+        var userMind = event.key;
+  
+        // Pick at random which letter the user must guess
+        var computerMind = alphabet[Math.floor(Math.random() * alphabet.length)];
+
+
+        rules.textContent = "";
+
+        // Player interface for Wins, Losses, Ties and choices
+        userMind.textContent = "Your Mind: " + userMind;
+        computerMind.textContent = "The computer's Mind: " + computerMind;
+        wins.textContent = "wins: " + wins;
+        losses.textContent = "losses: " + losses;
+        ties.textContent = "ties: " + ties;
+  
+    }
+};
